@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block title %}
+    Profile
+{% endblock %}
+{% block content %}
+
+{% for message in get_flashed_messages() %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>{{ message }}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+{% endfor %}
+<br>
+<h2>Profile</h2>
+<br>
+<div class="card">
+    <div class="card-header">
+        {{ current_user.name }}
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <strong>Name: </strong> {{ current_user.name }}<br>
+                    <strong>Username: </strong> {{ current_user.username }}<br>
+                    <strong>Email: </strong> {{ current_user.email }} <br>
+                    <strong>About Author: </strong>{{ current_user.about_author }} <br>
+                    <strong>Date Joined: </strong> {{ current_user.date_added }} <br><br>
+                    <a href="{{ url_for('logout') }}" class="btn btn-outline-secondary btn-sm">Logout</a>
+                    <a href="{{ url_for('update', id=current_user.id) }}"
+                        class="btn btn-outline-secondary btn-sm">Update Profile</a>
+                    <a href="{{ url_for('delete', id=current_user.id) }}"
+                        class="btn btn-outline-danger btn-sm">Delete</a>
+                </div>
+                <div class="col-4">
+                    {% if current_user.profile_pic %}
+                    <img src="{{ url_for('static', filename = 'images/' + current_user.profile_pic) }}" alt="" width="150px"
+                        align="right">
+                    {% else %}
+                    <img src="{{ url_for('static', filename = 'images/avatar.png') }}" alt="" width="150px"
+                        align="right">
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="card">
+    <div class="card-header">
+        User Profile
+    </div>
+    <div class="card-body">
+        <form action="/dashboard" method="POST" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            {{ form.name.label(class = 'form-label') }}
+            {{ form.name(class='form-control', value=name_to_update.name) }}
+            <br>
+            {{ form.username.label(class = 'form-label') }}
+            {{ form.username(class='form-control', value=name_to_update.username) }}
+            <br>
+            {{ form.email.label(class = 'form-label') }}
+            {{ form.email(class='form-control', value=name_to_update.email) }}
+            <br>
+            {{ form.about_author.label(class = 'form-label') }}
+            <textarea name="about_author" class="form-control" cols="30"
+                rows="10">{{ name_to_update.about_author }}</textarea>
+            <br>
+            {{ form.profile_pic.label(class = 'form-label') }}
+            {{ form.profile_pic(class='form-control', value=name_to_update.profile_pic) }}
+            <br>
+            {{ form.submit(class='btn btn-primary') }}
+            <a href="{{ url_for('delete', id=id) }}" class="btn btn-danger">Delete</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('index') }}">Cookmeai</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ url_for('home') }}">Img2Ing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ url_for('eat2gether') }}">Eat2Gether</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ url_for('posts') }}">Reviews</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ url_for('add_post') }}">Leave Reviews</a>
+                </li>
+            </ul>
+            <form class="d-flex" method="POST" action="{{ url_for('search') }}">
+                {{ form.hidden_tag() }}
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searched">
+                <button class="btn btn-outline-success" type="submit" style="height:36px;width:200px">Search</button>
+                
+            </form>
+
+            <div class="dropdown">
+                {% if current_user.is_authenticated %}
+                
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false" style="margin-left:8px">
+                    {{ current_user.username }}
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="margin-left:8px;height:80px;width:172px">
+                    <li><a class="dropdown-item" href="{{ url_for('dashboard') }}">Profile</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a></li>
+                </ul>
+                {% else %}
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false" style="margin-left:8px;height:40px;width:172px">
+                    Reviewer
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="margin-left:8px;height:80px;width:172px">
+                    <li><a class="dropdown-item" href="{{ url_for('login') }}">Login</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('add_user') }}">Register</a></li>
+                </ul>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,16 @@
+flask==2.2.2
+flask-wtf==1.0.1
+flask-sqlalchemy==3.0.2 
+Flask-Migrate==4.0.2
+werkzeug==2.2.2
+flask-login==0.6.2
+flask-ckeditor==0.4.6
+gunicorn==20.1.0
+psycopg2-binary==2.9.5
+tqdm==4.47.0
+torch==1.9.0 
+torchvision==0.10.0
+numpy==1.19.3 
+opencv-python==4.7.0.68 
+typing-extensions==4.4.0
+googlemaps==4.10.0
