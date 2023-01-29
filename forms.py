@@ -20,7 +20,7 @@ class PostForm(FlaskForm):
 
 class UserForm(FlaskForm):
     name = StringField("Name", validators=[DataRequired()])
-    username = StringField('username', validators=[DataRequired()])
+    username = StringField('Username', validators=[DataRequired()])
     email = StringField('Email', validators=[DataRequired()])
     about_author = TextAreaField('About Author')
     password_hash = PasswordField("Password", validators=[DataRequired(), EqualTo(

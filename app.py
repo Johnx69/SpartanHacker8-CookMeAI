@@ -235,7 +235,7 @@ def edit_post(id):
 # All Post Page
 @app.route('/posts')
 def posts():
-    posts = Posts.query.order_by(Posts.date_posted)
+    posts = Posts.query.order_by(Posts.date_posted.desc())
     return render_template('posts.html', posts=posts)
 
 # Add Post Page
@@ -285,6 +285,10 @@ def delete(id):
         flash("Sorry, you can't delete that user")
         return redirect(url_for('dashboard'))
 
+######## About us ########
+@app.route('/aboutus')
+def aboutus():
+    return render_template('aboutus.html')
 ######### AI #############
 @app.route('/home',methods=['GET'])
 def home():

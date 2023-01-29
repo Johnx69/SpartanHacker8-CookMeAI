@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ url_for('index') }}">Cookmeai</a>
+        <a class="navbar-brand" href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/logo/cookmeai.png') }}" style="width: 180px"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -19,12 +19,14 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ url_for('add_post') }}">Leave Reviews</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ url_for('aboutus') }}">About Us</a>
+                </li>
             </ul>
             <form class="d-flex" method="POST" action="{{ url_for('search') }}">
                 {{ form.hidden_tag() }}
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searched">
                 <button class="btn btn-outline-success" type="submit" style="height:36px;width:200px">Search</button>
-                
             </form>
 
             <div class="dropdown">
