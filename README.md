@@ -1,4 +1,4 @@
-# Cookmeai - Spartan Hacker8 Michi
+# Cookmeai - SpartaHacker 8 MSU
 
 ![cookmeai](https://user-images.githubusercontent.com/93436870/215383512-4ff3afa9-9ceb-4856-b660-793d10fca0b3.png)
 
