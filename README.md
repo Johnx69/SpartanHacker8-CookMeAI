@@ -1,13 +1,20 @@
 # Cookmeai - Spartan Hacker8 Michi
 
+![cookmeai](https://user-images.githubusercontent.com/93436870/215383512-4ff3afa9-9ceb-4856-b660-793d10fca0b3.png)
+
+
 ## Contributors
 
 - Anh Dao (Johnx) - https://github.com/Johnx69
-- Bach Nguyen - 
-- Tri Khuc - 
-- Nguyen Minh
+- Bach Nguyen - https://github.com/bach6104
+- Tri Khuc - https://github.com/Ahahaei
+- Nguyen Minh - https://github.com/minhngvh
 
 ## Features
+
+`Img2Ing`: allow users to upload an image of a food and the AI model will return the ingredients and recipes to cook that food.
+`Eat2Gether`: allow user to input some locations and our website will return the closest eating place ( Now just support people in campus Michigan State University).
+`Reviews`: allow user to write reviews about food in dining hall.
 
 ## Technologies Used
 
@@ -22,7 +29,7 @@
 
 ## How to run
 
-> Open Terminal and do the following instruction
+> Open Terminal and do the following instructions
 
 #### 1. Clone this github repo
 
