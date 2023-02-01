@@ -1,4 +1,5 @@
-# Cookmeai - SpartaHacker 8 MSU
+# Cookmeai - SpartaHacker 8 MSU (Best use of AI)
+
 
 ![cookmeai](https://user-images.githubusercontent.com/93436870/215383512-4ff3afa9-9ceb-4856-b660-793d10fca0b3.png)
 
@@ -10,11 +11,15 @@
 - Tri Khuc - https://github.com/Ahahaei
 - Nguyen Minh - https://github.com/minhngvh
 
+## Video Demo
+
+https://www.youtube.com/watch?v=ybEa5zyINSw
+
 ## Features
 
-`Img2Ing`: allow users to upload an image of a food and the AI model will return the ingredients and recipes to cook that food.
-`Eat2Gether`: allow user to input some locations and our website will return the closest eating place ( Now just support people in campus Michigan State University).
-`Reviews`: allow user to write reviews about food in dining hall.
+- `Img2Ing`: allow users to upload an image of a food and the AI model will return the ingredients and recipes to cook that food.
+- `Eat2Gether`: allow user to input some locations and our website will return the closest eating place ( Now just support people in campus Michigan State University).
+- `Reviews`: allow user to write reviews about food in dining hall.
 
 ## Technologies Used
 
