@@ -327,11 +327,6 @@ def img2ing():
     return render_template('img2ing.html')
 
 
-@app.route('/about', methods=['GET'])
-def about():
-    return render_template('about.html')
-
-
 @app.route('/img2ing', methods=['POST', 'GET'])
 def predict():
     imagefile = request.files['imagefile']
