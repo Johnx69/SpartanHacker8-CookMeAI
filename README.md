@@ -8,7 +8,7 @@
 
 - Anh Dao (Johnx) - https://github.com/Johnx69
 - Bach Nguyen - https://github.com/bach6104
-- Tri Khuc - https://github.com/Ahahaei
+- Tri Khuc - https://github.com/KhucMTri
 - Nguyen Minh - https://github.com/minhngvh
 
 ## Video Demo
